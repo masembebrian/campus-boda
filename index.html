@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Boda</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Header Section -->
+<header class="navbar">
+    <img src="images/logo.png" alt="Campus Boda Logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#wallet">Wallet</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login" onclick="showLoginModal()">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-content">
+        <h1>Welcome to Campus Boda</h1>
+        <p>Your reliable ride partner within the campus. Fast, safe, and affordable.</p>
+        <button class="cta-button" onclick="showRideBookingForm()">Book a Ride</button>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<main>
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-motorcycle service-icon"></i>
+                <h3>Safe Rides</h3>
+                <p>Quick and secure rides around campus.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wallet service-icon"></i>
+                <h3>Wallet Management</h3>
+                <p>Easily manage your ride expenses with our wallet feature.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ticket-alt service-icon"></i>
+                <h3>Subscription Packages</h3>
+                <p>Save more with our subscription packages for regular rides.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallet Section -->
+    <section id="wallet" class="content-section">
+        <h2>Your Wallet</h2>
+        <p>Current Balance: $<span id="wallet-balance">0.00</span></p>
+        <button class="cta-button" onclick="showWalletModal()">Deposit Money</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <p>Email: support@campusboda.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Campus Boda. All rights reserved.</p>
+</footer>
+
+<!-- Modals -->
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeLoginModal()">&times;</span>
+        <h2>Login to Campus Boda</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- Wallet Modal -->
+<div id="wallet-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeWalletModal()">&times;</span>
+        <h2>Deposit Money</h2>
+        <form>
+            <label for="amount">Enter amount to deposit:</label>
+            <input type="number" id="amount" name="amount" required>
+            <button type="submit">Deposit</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
